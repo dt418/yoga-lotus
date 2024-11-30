@@ -8,14 +8,14 @@
     "preview": "vite preview",
     "format": "biome format --write .",
     "lint": "biome lint .",
-    "check": "biome check --apply .",
+    "check": "biome check --write .",
     "prepare": "lefthook install",
     "test": "vitest",
     "test:ui": "vitest --ui",
     "test:coverage": "vitest run --coverage"
   },
   "lint-staged": {
-    "*.{js,ts,jsx,tsx,json}": ["biome check --apply", "biome format --write"]
+    "*.{js,ts,jsx,tsx,json}": ["biome check --write", "biome format --write"]
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
