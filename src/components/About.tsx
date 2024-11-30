@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function About() {
   return (
     <div className="w-[1440px] h-[406px] bg-[#0f0e0d] relative z-[1] mt-0 mr-0 mb-0 ml-0">
