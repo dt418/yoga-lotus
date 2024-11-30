@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./index.css";
+import { Link } from "react-router-dom";
 import BookingButton from "~/components/BookingButton";
 import BookingModal from "~/components/BookingModal";
 import Logo from "~/components/Logo";
@@ -17,9 +18,11 @@ export default function Main() {
   return (
     <>
       <div className="main-container md:max-w-[1440px] bg-[#191614] relative overflow-hidden mx-auto my-0 z-[0]">
-        <h1 className="inline-block ml-[60px] mt-[34px]">
-          <Logo width={155} height={127} title="Logo top" />
-        </h1>
+        <Link to={"/"}>
+          <h1 className="inline-block ml-[60px] mt-[34px] z-10">
+            <Logo width={155} height={127} title="Logo top" />
+          </h1>
+        </Link>
         <span className="block h-[20px] font-suse text-[16px] font-bold leading-[20px] text-lotus-main tracking-[9.6px] relative text-left whitespace-nowrap z-[158] mt-[115px] mr-0 mb-0 ml-[63px]">
           LOTUS GLOW YOGA CLUB
         </span>
@@ -37,7 +40,7 @@ export default function Main() {
           Illuminate your path with Lotus Glow – find balance and serenity
           through our organic yoga experience.
         </span>
-        <BookingButton onClick={handleOpenBookingModal} />
+        <BookingButton onClick={handleOpenBookingModal} className="ml-[63px]" />
         <div className="w-[641px] h-[81px] bg-lotus-main rounded-tl-[20px] rounded-tr-[60px] rounded-br-none rounded-bl-none relative z-[202] mt-[36px] mr-0 mb-0 ml-[739px]">
           <div className="w-[114px] h-[81px] bg-[#9a816a] rounded-tl-[20px] rounded-tr-[20px] rounded-br-[160px] rounded-bl-none absolute top-0 left-0 z-[203]">
             <div className="w-[48px] h-[48px] relative overflow-hidden z-[205] mt-[17px] mr-0 mb-0 ml-[24px]">
@@ -279,9 +282,11 @@ export default function Main() {
           </div>
         </div>
         <div className="w-[1297px] h-[185.992px] relative z-[142] mt-[73.008px] mr-0 mb-0 ml-[60px]">
-          <h1>
-            <Logo width={214} height={175} title="Logo bottom" />
-          </h1>
+          <Link to="/">
+            <h1>
+              <Logo width={214} height={175} title="Logo bottom" />
+            </h1>
+          </Link>
           <span className="flex h-[22px] justify-start items-start font-['Gotham_Black'] text-[20px] font-medium leading-[22px] text-[#fff] absolute top-[7.992px] left-[337px] text-left whitespace-nowrap z-[72]">
             PAY US A VISIT
           </span>
@@ -320,15 +325,6 @@ export default function Main() {
           <span className="flex h-[18px] justify-start items-start font-suse text-[14px] font-normal leading-[17.64px] text-[#fff] absolute top-[112.992px] left-[382px] text-left whitespace-nowrap z-[114]">
             (312) 555-7890
           </span>
-          {/* <div className="w-[1.8%] h-[12.13%] bg-[url(../assets/images/3d5a051e-1ecd-4371-8ce0-421d5e2bf6d4.png)] bg-[length:100%_100%] bg-no-repeat absolute top-[71.22%] left-[1.32%] z-[84]" />
-				<div className="w-[1.64%] h-[12.13%] bg-[url(../assets/images/0ea2b476-8e3a-48d3-9626-6c33621b31bb.png)] bg-[length:100%_100%] bg-no-repeat absolute top-[71.22%] left-[8.85%] z-[88]" />
-				<div className="w-[1.8%] h-[12.13%] bg-[url(../assets/images/18af0959-9402-44b8-9c1a-ee83a58f7e8f.png)] bg-[length:100%_100%] bg-no-repeat absolute top-[71.22%] left-[12.06%] z-[90]" />
-				<div className="w-[1.46%] h-[12.07%] bg-[url(../assets/images/87755cd1-1449-4d26-acc0-57da06e4512f.png)] bg-[length:100%_100%] bg-no-repeat absolute top-[71.25%] left-[6.56%] z-[87]" />
-				<div className="w-[2.6%] h-[11.78%] bg-[url(../assets/images/748984e4-3136-483f-9622-7089dbd598a0.png)] bg-[length:100%_100%] bg-no-repeat absolute top-[71.42%] left-[13.9%] z-[91]" />
-				<div className="w-[1.27%] h-[11.67%] bg-[url(../assets/images/704f6b37-eaeb-4fa7-b92a-6a83a9049055.png)] bg-[length:100%_100%] bg-no-repeat absolute top-[71.45%] left-0 z-[83]" />
-				<div className="w-[1.47%] h-[11.67%] bg-[url(../assets/images/3fe94173-9922-4857-af81-b441500161c0.png)] bg-[length:100%_100%] bg-no-repeat absolute top-[71.45%] left-[3.2%] z-[85]" />
-				<div className="w-[1.56%] h-[11.88%] bg-[url(../assets/images/a2dd32a4-5abc-4104-aaf7-f21e1dfe6248.png)] bg-[length:100%_100%] bg-no-repeat absolute top-[71.45%] left-[4.85%] z-[86]" />
-				<div className="w-[1.27%] h-[11.67%] bg-[url(../assets/images/ad371823-9e9a-4a99-98db-906b1d5868a2.png)] bg-[length:100%_100%] bg-no-repeat absolute top-[71.45%] left-[10.74%] z-[89]" /> */}
           <div className="w-[265px] h-[47px] bg-lotus-main rounded-[60px] absolute top-[133.992px] left-[1005px] z-[142]">
             <span className="flex h-[18px] justify-start items-start font-suse text-[14px] font-bold leading-[17.64px] text-[#191614] tracking-[3.22px] absolute top-[15px] left-[26px] text-left uppercase whitespace-nowrap z-[143]">
               Book a Session
@@ -341,30 +337,12 @@ export default function Main() {
           <span className="flex h-[18px] justify-start items-start font-suse text-[14px] font-normal leading-[17.64px] text-[#fff] absolute top-[157.992px] left-[382px] text-left whitespace-nowrap z-[115]">
             Contact@lotusglow.com
           </span>
-          {/* <div className="w-[0.52%] h-[4.1%] bg-[url(../assets/images/e8a5c4fd-92aa-49b1-96a4-cbe2ae8aa26d.png)] bg-[length:100%_100%] bg-no-repeat absolute top-[89.45%] left-[13.9%] z-[108]" />
-				<div className="w-[0.58%] h-[4.1%] bg-[url(../assets/images/55011bd2-9a51-487b-9c20-e298a2058c92.png)] bg-[length:100%_100%] bg-no-repeat absolute top-[89.45%] left-[4.63%] z-[98]" />
-				<div className="w-[0.47%] h-[4.02%] bg-[url(../assets/images/fe01b4b2-810d-40be-ba69-c3101369799e.png)] bg-[length:100%_100%] bg-no-repeat absolute top-[89.52%] left-[5.63%] z-[99]" />
-				<div className="w-[0.41%] h-[3.96%] bg-[url(../assets/images/b3a71779-e591-41ef-897d-6ba9bb1a630b.png)] bg-[length:100%_100%] bg-no-repeat absolute top-[89.52%] left-[0.08%] z-[93]" />
-				<div className="w-[0.06%] h-[3.96%] bg-[url(../assets/images/fcbd7789-2ab2-44df-9c0f-b6419e63cda4.png)] bg-[length:100%_100%] bg-no-repeat absolute top-[89.52%] left-[0.91%] z-[94]" />
-				<div className="w-[0.48%] h-[3.96%] bg-[url(../assets/images/24333446-aff7-4da3-a6f9-10020a5b570e.png)] bg-[length:100%_100%] bg-no-repeat absolute top-[89.52%] left-[1.43%] z-[95]" />
-				<div className="w-[0.5%] h-[3.96%] bg-[url(../assets/images/f928d88e-c218-4865-b25e-5d66107a6a9e.png)] bg-[length:100%_100%] bg-no-repeat absolute top-[89.52%] left-[2.37%] z-[96]" />
-				<div className="w-[0.54%] h-[3.96%] bg-[url(../assets/images/b7700189-c23f-4652-ac19-b72b1c87af72.png)] bg-[length:100%_100%] bg-no-repeat absolute top-[89.52%] left-[3.77%] z-[97]" />
-				<div className="w-[0.47%] h-[3.96%] bg-[url(../assets/images/1c237d2c-20ff-4161-8ae4-3eb5b9a68287.png)] bg-[length:100%_100%] bg-no-repeat absolute top-[89.52%] left-[6.54%] z-[100]" />
-				<div className="w-[0.06%] h-[3.96%] bg-[url(../assets/images/2d99c47e-3ff8-44e6-b5a9-37cef49b8fec.png)] bg-[length:100%_100%] bg-no-repeat absolute top-[89.52%] left-[7.96%] z-[101]" />
-				<div className="w-[0.48%] h-[3.96%] bg-[url(../assets/images/5feb325e-0cef-4123-a8a1-6affa5413e8a.png)] bg-[length:100%_100%] bg-no-repeat absolute top-[89.52%] left-[8.49%] z-[102]" />
-				<div className="w-[0.48%] h-[3.96%] bg-[url(../assets/images/32801676-540d-478f-8693-d82f2a15a5a9.png)] bg-[length:100%_100%] bg-no-repeat absolute top-[89.52%] left-[9.42%] z-[103]" />
-				<div className="w-[0.47%] h-[3.96%] bg-[url(../assets/images/0ac7d428-85d6-4a4f-ba5b-8efee89086ce.png)] bg-[length:100%_100%] bg-no-repeat absolute top-[89.52%] left-[11.19%] z-[105]" />
-				<div className="w-[0.38%] h-[3.96%] bg-[url(../assets/images/848e447b-0517-42c3-8507-69a59f9156cb.png)] bg-[length:100%_100%] bg-no-repeat absolute top-[89.52%] left-[12.6%] z-[106]" />
-				<div className="w-[0.06%] h-[3.96%] bg-[url(../assets/images/dbda6702-3a9a-4265-ac4a-3938a0d2b157.png)] bg-[length:100%_100%] bg-no-repeat absolute top-[89.52%] left-[13.4%] z-[107]" />
-				<div className="w-[0.46%] h-[3.96%] bg-[url(../assets/images/e345dd63-f67f-4bb7-a069-f9d314c40d4c.png)] bg-[length:100%_100%] bg-no-repeat absolute top-[89.52%] left-[14.85%] z-[109]" />
-				<div className="w-[0.45%] h-[3.96%] bg-[url(../assets/images/872b1b67-288f-47a0-861c-5306ae2e840d.png)] bg-[length:100%_100%] bg-no-repeat absolute top-[89.52%] left-[15.72%] z-[110]" />
-				<div className="w-[0.41%] h-[3.96%] bg-[url(../assets/images/6598a0ba-4821-4062-9422-349080190940.png)] bg-[length:100%_100%] bg-no-repeat absolute top-[89.53%] left-[10.35%] z-[104]" /> */}
         </div>
         <div className="w-[1319.5px] h-px bg-[url(../assets/images/be2a1910-5829-4490-b08e-43ee2c8952a2.png)] bg-cover bg-no-repeat relative z-[146] mt-[49px] mr-0 mb-0 ml-[60px]" />
         <span className="flex w-[792px] h-[18px] justify-center items-start font-suse text-[14px] font-bold leading-[17.64px] text-lotus-main tracking-[4.62px] relative text-center whitespace-nowrap z-[112] mt-[29px] mr-0 mb-0 ml-[324px]">
           LOTUS GLOW YOGA CLUB ALL RIGHTS RESERVED 2024
         </span>
-        <div className="w-[1440px] h-[856px] bg-[url(../assets/images/5be85dd5-00a6-4f69-9815-73727cb9312a.png)] bg-cover bg-no-repeat absolute top-0 left-0" />
+        {/* <div className="inline w-full h-[856px] bg-[url(../assets/images/5be85dd5-00a6-4f69-9815-73727cb9312a.png)] bg-cover bg-no-repeat absolute top-0 left-0 z-0" /> */}
       </div>
       <BookingModal
         isOpen={isBookingModalOpen}

@@ -22,6 +22,6 @@ button {
 
 @layer base {
   body {
-    @apply bg-[#191614] font-gotham_black text-[#fff];
+    @apply bg-lotus-black font-gotham_black text-[#fff];
   }
 }

@@ -61,18 +61,18 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
     >
       <div
         className={cn(
-          "bg-[url('../assets/images/bg-booking-modal.png')] bg-cover bg-center bg-no-repeat rounded-[20px] shadow-xl relative overflow-hidden",
+          "bg-[url('../assets/images/bg-booking-modal.png')] bg-cover bg-bottom md:bg-center bg-no-repeat rounded-[20px] shadow-xl relative overflow-hidden",
           "animate-in slide-in-from-top-4 duration-300",
-          "w-full max-w-[1317px]",
+          "w-full md:max-w-[987.5px] 2xl:max-w-[1317px]",
         )}
         onClick={(e) => e.stopPropagation()}
         onKeyUp={(e) => e.stopPropagation()}
       >
-        <div className="bg-lotus-black bg-opacity-65 overflow-hidden">
+        <div className=" bg-lotus-black bg-opacity-65 relative">
           <button
             type="button"
             onClick={onClose}
-            className="text-white h-[160px] w-[112px] bg-lotus-black rounded-b-full flex justify-center items-center ml-auto mr-[112px]"
+            className="absolute top-0 right-[35px] md:right-[112px] text-white h-[160px] w-[112px] bg-lotus-black rounded-b-full flex justify-center items-center"
           >
             {/* biome-ignore lint/a11y/noSvgWithoutTitle: <explanation> */}
             <svg
@@ -92,15 +92,24 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
           </button>
 
           <div className="">
+            <div className="flex flex-col justify-center pt-[150px] px-[32px] pb-[74px] md:px-[74px] md:pt-[160px] md:pb-[148px]">
+              <h3 className="md:text-base font-suse font-bold leading-[1.25] text-center md:text-left">
+                JOIN THE LOTUS GLOW
+              </h3>
+              <h2 className="text-[53px] px-[40px] md:px-0 md:text-7xl font-bold leading-[1.15] text-center md:text-left">
+                <span className="text-lotus-main">BOOK</span> A{" "}
+                <span>SESSION</span>
+              </h2>
+            </div>
             <form
               onSubmit={handleSubmit(onSubmit)}
-              className="space-y-6 bg-lotus-main inset-0 px-[80px] pb-[134px]"
+              className="space-y-6 bg-lotus-main inset-0 md:px-[80px] md:pt-[20px] md:pb-[40px]"
               noValidate
             >
               <div className="space-y-4 ">
                 <div>
                   <label
-                    className="block text-xs font-suse tracking-[3.3px] text-lotus-main mb-2"
+                    className="block text-xs font-suse tracking-[3.3px] text-lotus-black mb-2"
                     htmlFor="fullName"
                   >
                     FULL NAME
@@ -110,9 +119,9 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                     id="fullName"
                     {...register("fullName")}
                     className={cn(
-                      "w-full bg-transparent border-2 border-white rounded-full px-8 py-4",
-                      "text-white font-suse placeholder:text-white/30",
-                      "focus:border-lotus-main focus:outline-none transition-colors",
+                      "w-full bg-transparent border-2 border-white/80 rounded-full px-8 py-4",
+                      "text-white font-suse placeholder:text-white/80",
+                      "focus:border-white focus:outline-none transition-colors",
                       errors.fullName && "border-red-500",
                     )}
                     placeholder="Eg. Jane Done"
@@ -124,10 +133,10 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                   )}
                 </div>
 
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label
-                      className="block text-xs font-suse tracking-[3.3px] text-lotus-main mb-2"
+                      className="block text-xs font-suse tracking-[3.3px] text-lotus-black mb-2"
                       htmlFor="email"
                     >
                       EMAIL ADDRESS
@@ -137,9 +146,9 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                       id="email"
                       {...register("email")}
                       className={cn(
-                        "w-full bg-transparent border-2 border-white rounded-full px-8 py-4",
-                        "text-white font-suse placeholder:text-white/30",
-                        "focus:border-lotus-main focus:outline-none transition-colors",
+                        "w-full bg-transparent border-2 border-white/80 rounded-full px-8 py-4",
+                        "text-white font-suse placeholder:text-white/80",
+                        "focus:border-white focus:outline-none transition-colors",
                         errors.email && "border-red-500",
                       )}
                       placeholder="Eg. janedoe@gmail.com"
@@ -153,7 +162,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
 
                   <div>
                     <label
-                      className="block text-xs font-suse tracking-[3.3px] text-lotus-main mb-2"
+                      className="block text-xs font-suse tracking-[3.3px] text-lotus-black mb-2"
                       htmlFor="phone"
                     >
                       PHONE NUMBER
@@ -163,9 +172,9 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                       id="phone"
                       {...register("phone")}
                       className={cn(
-                        "w-full bg-transparent border-2 border-white rounded-full px-8 py-4",
-                        "text-white font-suse placeholder:text-white/30",
-                        "focus:border-lotus-main focus:outline-none transition-colors",
+                        "w-full bg-transparent border-2 border-white/80 rounded-full px-8 py-4",
+                        "text-white font-suse placeholder:text-white/80",
+                        "focus:border-white focus:outline-none transition-colors",
                         errors.phone && "border-red-500",
                       )}
                       placeholder="Eg. 1631260100"
@@ -180,7 +189,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
 
                 <div>
                   <label
-                    className="block text-xs font-suse tracking-[3.3px] text-lotus-main mb-2"
+                    className="block text-xs font-suse tracking-[3.3px] text-lotus-black mb-2"
                     htmlFor="sessionType"
                   >
                     PREFERRED SESSION TYPE
@@ -189,9 +198,9 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                     id="sessionType"
                     {...register("sessionType")}
                     className={cn(
-                      "w-full bg-transparent border-2 border-white rounded-full px-8 py-4",
+                      "w-full bg-transparent border-2 border-white/80 rounded-full px-8 py-4",
                       "text-white font-suse",
-                      "focus:border-lotus-main focus:outline-none transition-colors",
+                      "focus:border-white focus:outline-none transition-colors",
                       errors.sessionType && "border-red-500",
                     )}
                   >
@@ -218,7 +227,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label
-                      className="block text-xs font-suse tracking-[3.3px] text-lotus-main mb-2"
+                      className="block text-xs font-suse tracking-[3.3px] text-lotus-black mb-2"
                       htmlFor="date"
                     >
                       DATE
@@ -228,9 +237,9 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                       id="date"
                       {...register("date")}
                       className={cn(
-                        "w-full bg-transparent border-2 border-white rounded-full px-8 py-4",
-                        "text-white font-suse placeholder:text-white/30",
-                        "focus:border-lotus-main focus:outline-none transition-colors",
+                        "w-full bg-transparent border-2 border-white/80 rounded-full px-8 py-4",
+                        "text-white font-suse placeholder:text-white/80",
+                        "focus:border-white focus:outline-none transition-colors",
                         errors.date && "border-red-500",
                       )}
                     />
@@ -243,7 +252,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
 
                   <div>
                     <label
-                      className="block text-xs font-suse tracking-[3.3px] text-lotus-main mb-2"
+                      className="block text-xs font-suse tracking-[3.3px] text-lotus-black mb-2"
                       htmlFor="time"
                     >
                       TIME
@@ -253,9 +262,9 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                       id="time"
                       {...register("time")}
                       className={cn(
-                        "w-full bg-transparent border-2 border-white rounded-full px-8 py-4",
-                        "text-white font-suse placeholder:text-white/30",
-                        "focus:border-lotus-main focus:outline-none transition-colors",
+                        "w-full bg-transparent border-2 border-white/80 rounded-full px-8 py-4",
+                        "text-white font-suse placeholder:text-white/80",
+                        "focus:border-white focus:outline-none transition-colors",
                         errors.time && "border-red-500",
                       )}
                     />
@@ -268,9 +277,11 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                 </div>
               </div>
 
-              <BookingButton type="submit" variant="light">
-                BOOK NOW
-              </BookingButton>
+              <div>
+                <BookingButton type="submit" variant="light">
+                  BOOK NOW
+                </BookingButton>
+              </div>
             </form>
           </div>
         </div>
