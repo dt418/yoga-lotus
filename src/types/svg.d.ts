@@ -1,14 +1,14 @@
 declare module "*.svg?react" {
-	import type * as React from "react";
+  import type * as React from "react";
 
-	const ReactComponent: React.FunctionComponent<
-		React.ComponentProps<"svg"> & { title?: string }
-	>;
+  const ReactComponent: React.FunctionComponent<
+    React.ComponentProps<"svg"> & { title?: string }
+  >;
 
-	export default ReactComponent;
+  export default ReactComponent;
 }
 
 declare module "*.svg" {
-	const content: string;
-	export default content;
+  const content: string;
+  export default content;
 }

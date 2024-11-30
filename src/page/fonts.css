@@ -10,9 +10,9 @@
 @font-face {
   font-family: "SUSE";
   src: url("../assets/fonts/SUSE-VariableFont_wght.woff2")
-      format("woff2 supports variations"),
+    format("woff2 supports variations"),
     url("../assets/fonts/SUSE-VariableFont_wght.ttf")
-      format("truetype supports variations");
+    format("truetype supports variations");
   font-weight: 400 700;
   font-style: normal;
   font-display: swap;

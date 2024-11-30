@@ -6,9 +6,9 @@ import App from "./App";
 const container = document.getElementById("app") as Container;
 const root = createRoot(container);
 root.render(
-	<BrowserRouter
-		future={{ v7_startTransition: true, v7_relativeSplatPath: true }}
-	>
-		<App />
-	</BrowserRouter>,
+  <BrowserRouter
+    future={{ v7_startTransition: true, v7_relativeSplatPath: true }}
+  >
+    <App />
+  </BrowserRouter>,
 );
