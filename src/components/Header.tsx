@@ -1,5 +1,3 @@
-import React from "react";
-
 const Header = () => {
 	return (
 		<div className="w-[1317px] h-[160px] relative z-[198] mt-0 mr-0 mb-0 ml-[63px]">

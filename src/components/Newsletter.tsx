@@ -1,5 +1,3 @@
-import React from "react";
-
 const Newsletter = () => {
 	return (
 		<div className="w-[1321px] h-[302px] bg-[url(../assets/images/8e23ffe6-527f-4430-bdb6-a70e93a1ef17.png)] bg-cover bg-no-repeat relative z-[70] mt-[73px] mr-0 mb-0 ml-[60px]">

@@ -1,5 +1,3 @@
-import React from "react";
-
 const ContactBar = () => {
 	return (
 		<div className="w-[641px] h-[81px] bg-[#c7a78a] rounded-tl-[20px] rounded-tr-[60px] rounded-br-none rounded-bl-none relative z-[202] mt-[36px] mr-0 mb-0 ml-[739px]">
