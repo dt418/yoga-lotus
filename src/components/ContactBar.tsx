@@ -11,7 +11,7 @@ const ContactBar = () => {
           GIVE US A CALL:
         </span>
         <span className="font-['SUSE'] text-[20px] font-medium leading-[25.2px] text-[#191614] tracking-[4.6px] relative text-center">
-          {" "}
+          {' '}
           (312) 555-7890
         </span>
       </div>

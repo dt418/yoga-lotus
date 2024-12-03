@@ -1,4 +1,4 @@
-import LogoSvg from "../assets/images/logo-full.svg?react";
+import LogoSvg from '../assets/images/logo-full.svg?react';
 interface ILogoProps extends React.SVGProps<SVGSVGElement> {
   title?: string;
 }

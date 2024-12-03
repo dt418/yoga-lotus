@@ -1,9 +1,9 @@
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useEffect } from "react";
-import { useForm } from "react-hook-form";
-import { cn } from "~/lib/cn";
-import { type BookingFormData, bookingSchema } from "~/schemas/booking";
-import BookingButton from "./BookingButton";
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useEffect } from 'react';
+import { useForm } from 'react-hook-form';
+import { cn } from '~/lib/cn';
+import { type BookingFormData, bookingSchema } from '~/schemas/booking';
+import BookingButton from './BookingButton';
 
 interface BookingModalProps {
   isOpen: boolean;
@@ -19,12 +19,12 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
   } = useForm<BookingFormData>({
     resolver: zodResolver(bookingSchema),
     defaultValues: {
-      fullName: "",
-      email: "",
-      phone: "",
-      sessionType: "Yin Yoga",
-      date: "",
-      time: "",
+      fullName: '',
+      email: '',
+      phone: '',
+      sessionType: 'Yin Yoga',
+      date: '',
+      time: '',
     },
   });
 
@@ -32,11 +32,11 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
     try {
       // Simulate API call
       await new Promise<void>((resolve) => setTimeout(resolve, 1000));
-      console.log("Form submitted:", data);
+      console.log('Form submitted:', data);
       reset(); // Clear form data
       onClose();
     } catch (error) {
-      console.error("Error submitting form:", error);
+      console.error('Error submitting form:', error);
     }
   };
 
@@ -52,9 +52,9 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
   return (
     <div
       className={cn(
-        "fixed inset-0 bg-black bg-opacity-65 backdrop-blur-md z-50",
-        "animate-in fade-in duration-200",
-        "flex items-center justify-center",
+        'fixed inset-0 bg-black bg-opacity-65 backdrop-blur-md z-50',
+        'animate-in fade-in duration-200',
+        'flex items-center justify-center',
       )}
       onClick={onClose}
       onKeyUp={onClose}
@@ -62,8 +62,8 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
       <div
         className={cn(
           "bg-[url('../assets/images/bg-booking-modal.png')] bg-cover bg-bottom md:bg-center bg-no-repeat rounded-[20px] shadow-xl relative overflow-hidden",
-          "animate-in slide-in-from-top-4 duration-300",
-          "w-full md:max-w-[987.5px] 2xl:max-w-[1317px]",
+          'animate-in slide-in-from-top-4 duration-300',
+          'w-full md:max-w-[987.5px] 2xl:max-w-[1317px]',
         )}
         onClick={(e) => e.stopPropagation()}
         onKeyUp={(e) => e.stopPropagation()}
@@ -97,7 +97,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                 JOIN THE LOTUS GLOW
               </h3>
               <h2 className="text-[53px] px-[40px] md:px-0 md:text-7xl font-bold leading-[1.15] text-center md:text-left">
-                <span className="text-lotus-main">BOOK</span> A{" "}
+                <span className="text-lotus-main">BOOK</span> A{' '}
                 <span>SESSION</span>
               </h2>
             </div>
@@ -117,12 +117,12 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                   <input
                     type="text"
                     id="fullName"
-                    {...register("fullName")}
+                    {...register('fullName')}
                     className={cn(
-                      "w-full bg-transparent border-2 border-white/80 rounded-full px-8 py-4",
-                      "text-white font-suse placeholder:text-white/80",
-                      "focus:border-white focus:outline-none transition-colors",
-                      errors.fullName && "border-red-500",
+                      'w-full bg-transparent border-2 border-white/80 rounded-full px-8 py-4',
+                      'text-white font-suse placeholder:text-white/80',
+                      'focus:border-white focus:outline-none transition-colors',
+                      errors.fullName && 'border-red-500',
                     )}
                     placeholder="Eg. Jane Done"
                   />
@@ -144,12 +144,12 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                     <input
                       type="email"
                       id="email"
-                      {...register("email")}
+                      {...register('email')}
                       className={cn(
-                        "w-full bg-transparent border-2 border-white/80 rounded-full px-8 py-4",
-                        "text-white font-suse placeholder:text-white/80",
-                        "focus:border-white focus:outline-none transition-colors",
-                        errors.email && "border-red-500",
+                        'w-full bg-transparent border-2 border-white/80 rounded-full px-8 py-4',
+                        'text-white font-suse placeholder:text-white/80',
+                        'focus:border-white focus:outline-none transition-colors',
+                        errors.email && 'border-red-500',
                       )}
                       placeholder="Eg. janedoe@gmail.com"
                     />
@@ -170,12 +170,12 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                     <input
                       type="tel"
                       id="phone"
-                      {...register("phone")}
+                      {...register('phone')}
                       className={cn(
-                        "w-full bg-transparent border-2 border-white/80 rounded-full px-8 py-4",
-                        "text-white font-suse placeholder:text-white/80",
-                        "focus:border-white focus:outline-none transition-colors",
-                        errors.phone && "border-red-500",
+                        'w-full bg-transparent border-2 border-white/80 rounded-full px-8 py-4',
+                        'text-white font-suse placeholder:text-white/80',
+                        'focus:border-white focus:outline-none transition-colors',
+                        errors.phone && 'border-red-500',
                       )}
                       placeholder="Eg. 1631260100"
                     />
@@ -196,12 +196,12 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                   </label>
                   <select
                     id="sessionType"
-                    {...register("sessionType")}
+                    {...register('sessionType')}
                     className={cn(
-                      "w-full bg-transparent border-2 border-white/80 rounded-full px-8 py-4",
-                      "text-white font-suse",
-                      "focus:border-white focus:outline-none transition-colors",
-                      errors.sessionType && "border-red-500",
+                      'w-full bg-transparent border-2 border-white/80 rounded-full px-8 py-4',
+                      'text-white font-suse',
+                      'focus:border-white focus:outline-none transition-colors',
+                      errors.sessionType && 'border-red-500',
                     )}
                   >
                     <option value="Yin Yoga" className="bg-[#191614]">
@@ -235,12 +235,12 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                     <input
                       type="date"
                       id="date"
-                      {...register("date")}
+                      {...register('date')}
                       className={cn(
-                        "w-full bg-transparent border-2 border-white/80 rounded-full px-8 py-4",
-                        "text-white font-suse placeholder:text-white/80",
-                        "focus:border-white focus:outline-none transition-colors",
-                        errors.date && "border-red-500",
+                        'w-full bg-transparent border-2 border-white/80 rounded-full px-8 py-4',
+                        'text-white font-suse placeholder:text-white/80',
+                        'focus:border-white focus:outline-none transition-colors',
+                        errors.date && 'border-red-500',
                       )}
                     />
                     {errors.date && (
@@ -260,12 +260,12 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                     <input
                       type="time"
                       id="time"
-                      {...register("time")}
+                      {...register('time')}
                       className={cn(
-                        "w-full bg-transparent border-2 border-white/80 rounded-full px-8 py-4",
-                        "text-white font-suse placeholder:text-white/80",
-                        "focus:border-white focus:outline-none transition-colors",
-                        errors.time && "border-red-500",
+                        'w-full bg-transparent border-2 border-white/80 rounded-full px-8 py-4',
+                        'text-white font-suse placeholder:text-white/80',
+                        'focus:border-white focus:outline-none transition-colors',
+                        errors.time && 'border-red-500',
                       )}
                     />
                     {errors.time && (

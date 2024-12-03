@@ -1,31 +1,31 @@
-import { type VariantProps, cva } from "class-variance-authority";
-import { cn } from "~/lib/cn";
+import { type VariantProps, cva } from 'class-variance-authority';
+import { cn } from '~/lib/cn';
 
 const bookingButtonVariants = cva(
-  "w-[293px] rounded-[60px] relative z-[160] mt-[72px] mr-0 mb-0 py-[20px] px-[34px] flex row justify-between group",
+  'w-[293px] rounded-[60px] relative z-[160] mt-[72px] mr-0 mb-0 py-[20px] px-[34px] flex row justify-between group',
   {
     variants: {
       variant: {
-        light: "bg-lotus-hover text-lotus-text fill-current",
-        dark: "bg-lotus-main text-lotus-black fill-current",
+        light: 'bg-lotus-hover text-lotus-text fill-current',
+        dark: 'bg-lotus-main text-lotus-black fill-current',
       },
       fullWidth: {
-        true: "w-full",
+        true: 'w-full',
       },
     },
     defaultVariants: {
-      variant: "dark",
+      variant: 'dark',
       fullWidth: false,
     },
   },
 );
 
-interface IBookingButtonProps
+interface BookingButtonProps
   extends React.HTMLProps<HTMLButtonElement>,
     VariantProps<typeof bookingButtonVariants> {}
 
-const BookingButton: React.FC<IBookingButtonProps> = ({
-  type = "button",
+const BookingButton: React.FC<BookingButtonProps> = ({
+  type = 'button',
   className,
   variant,
   fullWidth,

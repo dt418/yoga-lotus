@@ -1,9 +1,9 @@
-import { useState } from "react";
-import "./index.css";
-import { Link } from "react-router-dom";
-import BookingButton from "~/components/BookingButton";
-import BookingModal from "~/components/BookingModal";
-import Logo from "~/components/Logo";
+import { useState } from 'react';
+import './index.css';
+import { Link } from 'react-router-dom';
+import BookingButton from '~/components/BookingButton';
+import BookingModal from '~/components/BookingModal';
+import Logo from '~/components/Logo';
 
 export default function Main() {
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
@@ -18,7 +18,7 @@ export default function Main() {
   return (
     <>
       <div className="main-container md:max-w-[1440px] bg-[#191614] relative overflow-hidden mx-auto my-0 z-[0]">
-        <Link to={"/"}>
+        <Link to={'/'}>
           <h1 className="inline-block ml-[60px] mt-[34px] z-10">
             <Logo width={155} height={127} title="Logo top" />
           </h1>
