@@ -5,7 +5,7 @@ interface IButtonProps {
   onClick: MouseEventHandler<HTMLButtonElement>;
   isDisabled?: boolean;
 }
-function Button({ label, onClick, isDisabled }: IButtonProps) {
+function Button({ label, onClick, isDisabled }: Readonly<IButtonProps>) {
   return (
     <button
       onClick={onClick}
