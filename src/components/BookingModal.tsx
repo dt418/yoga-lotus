@@ -50,7 +50,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div
+    <dialog
       className={cn(
         'fixed inset-0 bg-black bg-opacity-65 backdrop-blur-md z-50',
         'animate-in fade-in duration-200',
@@ -74,7 +74,6 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
             onClick={onClose}
             className="absolute top-0 right-[35px] md:right-[112px] text-white h-[160px] w-[112px] bg-lotus-black rounded-b-full flex justify-center items-center"
           >
-            {/* biome-ignore lint/a11y/noSvgWithoutTitle: <explanation> */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -86,6 +85,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
               strokeLinecap="round"
               strokeLinejoin="round"
             >
+              <title>Close Icon</title>
               <path d="M18 6 6 18" />
               <path d="m6 6 12 12" />
             </svg>
@@ -286,7 +286,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
           </div>
         </div>
       </div>
-    </div>
+    </dialog>
   );
 };
 

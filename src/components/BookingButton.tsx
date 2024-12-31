@@ -1,4 +1,5 @@
 import { type VariantProps, cva } from 'class-variance-authority';
+import IconArrowRight from '~/assets/images/arrow-to-right.svg?react';
 import { cn } from '~/lib/cn';
 
 const bookingButtonVariants = cva(
@@ -6,8 +7,8 @@ const bookingButtonVariants = cva(
   {
     variants: {
       variant: {
-        light: 'bg-lotus-hover text-lotus-text fill-current',
-        dark: 'bg-lotus-main text-lotus-black fill-current',
+        light: 'bg-lotus-hover text-lotus-text',
+        dark: 'bg-lotus-main text-lotus-black',
       },
       fullWidth: {
         true: 'w-full',
@@ -39,7 +40,9 @@ const BookingButton: React.FC<BookingButtonProps> = ({
       <span className="w-[174px] h-[18px] font-suse text-[14px] font-bold leading-[17.64px] border-none tracking-[3.22px] whitespace-nowrap pointer uppercase">
         Book a session
       </span>
-      <span className="w-[14px] h-[11.5px] bg-[url(../assets/images/arrow-to-right.svg)] bg-[length:100%_100%] bg-no-repeat group-hover:translate-x-2 translate-x-0 transition duration-300" />
+      <span className="w-[14px] h-[11.5px] bg-[length:100%_100%] bg-no-repeat group-hover:translate-x-2 translate-x-0 transition duration-300">
+        <IconArrowRight />
+      </span>
     </button>
   );
 };

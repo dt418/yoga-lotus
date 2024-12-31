@@ -19,7 +19,7 @@ export const YogaClassSchema = z.object({
     ]),
     startTime: z
       .string()
-      .regex(/^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$/, 'Invalid time format'),
+      .regex(/^([0-1]?\d|2[0-3]):[0-5]\d$/, 'Invalid time format'),
   }),
   level: z.enum(['Beginner', 'Intermediate', 'Advanced']),
   isActive: z.boolean().default(true),

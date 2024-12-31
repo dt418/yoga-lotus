@@ -15,7 +15,7 @@ interface QueryProviderProps {
  * Provider component that wraps the application with react-query's QueryClientProvider
  * This enables the use of react-query hooks throughout the application
  *
- * @param {QueryProviderProps} props - The component props
+ * @param {Readonly<QueryProviderProps>} props - The component props
  * @returns {JSX.Element} The wrapped children with query client context
  *
  * @example
@@ -29,7 +29,7 @@ interface QueryProviderProps {
  * }
  * ```
  */
-export function QueryProvider({ children }: QueryProviderProps) {
+export function QueryProvider({ children }: Readonly<QueryProviderProps>) {
   return (
     <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
   );
