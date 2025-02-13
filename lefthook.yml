@@ -7,7 +7,7 @@ pre-push:
   commands:
     packages-audit:
       tags: frontend security
-      run: npm audit fix
+      run: pnpm audit fix
 
 pre-commit:
   parallel: true
@@ -15,4 +15,4 @@ pre-commit:
     lint-staged:
       run: npx lint-staged
     test:
-      run: npm run test
+      run: pnpm run test

@@ -42,6 +42,12 @@ importers:
       '@biomejs/biome':
         specifier: 1.9.4
         version: 1.9.4
+      '@evilmartians/lefthook':
+        specifier: ^1.10.10
+        version: 1.10.10
+      '@evilmartians/lefthook-installer':
+        specifier: ^1.10.10
+        version: 1.10.10
       '@tailwindcss/typography':
         specifier: ^0.5.10
         version: 0.5.16(tailwindcss@3.4.17)
@@ -85,7 +91,7 @@ importers:
         specifier: ^25.0.1
         version: 25.0.1
       lefthook:
-        specifier: ^1.8.4
+        specifier: ^1.10.10
         version: 1.10.10
       lint-staged:
         specifier: ^15.2.10
@@ -570,6 +576,17 @@ packages:
     engines: {node: '>=12'}
     cpu: [x64]
     os: [win32]
+
+  '@evilmartians/lefthook-installer@1.10.10':
+    resolution: {integrity: sha512-78Ozno2Ly+SVbqF4KhXZ99QzeQTiO6Ismi71XYLk1VsaFDHsUi7pg+h5lFrwYpeY0/GsuLp3CpJoqvlk/Lk5DQ==}
+    cpu: [x64, arm64]
+    os: [darwin, linux, win32]
+    hasBin: true
+
+  '@evilmartians/lefthook@1.10.10':
+    resolution: {integrity: sha512-MRIA0zJzUBbmcbecI7QjI08li4ffpmZ6DeVydEiZSg0vSx5mElEMEjDEjkI60eSV0XOm7LRbQKz2rfW6NqH8Cw==}
+    os: [darwin, linux, win32]
+    hasBin: true
 
   '@hookform/resolvers@3.10.0':
     resolution: {integrity: sha512-79Dv+3mDF7i+2ajj7SkypSKHhl1cbln1OGavqrsF7p6mbUv11xpqpacPsGDCTRvCSjEEIez2ef1NveSVL3b0Ag==}
@@ -2566,6 +2583,10 @@ snapshots:
 
   '@esbuild/win32-x64@0.21.5':
     optional: true
+
+  '@evilmartians/lefthook-installer@1.10.10': {}
+
+  '@evilmartians/lefthook@1.10.10': {}
 
   '@hookform/resolvers@3.10.0(react-hook-form@7.54.2(react@18.3.1))':
     dependencies:
