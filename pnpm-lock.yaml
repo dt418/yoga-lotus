@@ -732,11 +732,13 @@ packages:
 
   '@evilmartians/lefthook-installer@1.10.10':
     resolution: {integrity: sha512-78Ozno2Ly+SVbqF4KhXZ99QzeQTiO6Ismi71XYLk1VsaFDHsUi7pg+h5lFrwYpeY0/GsuLp3CpJoqvlk/Lk5DQ==}
+    cpu: [x64, arm64]
     os: [darwin, linux, win32]
     hasBin: true
 
   '@evilmartians/lefthook@1.10.10':
     resolution: {integrity: sha512-MRIA0zJzUBbmcbecI7QjI08li4ffpmZ6DeVydEiZSg0vSx5mElEMEjDEjkI60eSV0XOm7LRbQKz2rfW6NqH8Cw==}
+    cpu: [x64, arm64, ia32]
     os: [darwin, linux, win32]
     hasBin: true
 
